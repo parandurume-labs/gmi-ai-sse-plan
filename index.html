@@ -127,6 +127,25 @@
 
   .quote { font-size: 22px; color: var(--text); text-align: center; max-width: 700px; line-height: 1.7; font-weight: 300; }
   .quote strong { font-weight: 700; }
+
+  /* Before/After disruption layout */
+  .disruption { display: grid; grid-template-columns: 1fr 48px 1fr; gap: 0; width: 100%; max-width: 1000px; align-items: start; }
+  .disruption-col { display: flex; flex-direction: column; gap: 6px; }
+  .disruption-col.before { opacity: 0.5; }
+  .disruption-header { font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; padding: 8px 18px; border-radius: 8px; display: inline-block; width: fit-content; }
+  .disruption-header.old { color: #ff6b6b; background: rgba(255,107,107,0.12); border: 1px solid rgba(255,107,107,0.25); }
+  .disruption-header.new { color: var(--green); background: rgba(0,210,160,0.12); border: 1px solid rgba(0,210,160,0.25); }
+  .disruption-row { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 10px; font-size: 15px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); }
+  .disruption-col.after .disruption-row { background: rgba(0,210,160,0.04); border-color: rgba(0,210,160,0.12); }
+  .disruption-row .d-icon { font-size: 18px; flex-shrink: 0; }
+  .disruption-row .d-label { color: var(--text-muted); flex: 1; font-size: 14px; }
+  .disruption-row .d-value { font-weight: 900; white-space: nowrap; font-size: 15px; }
+  .disruption-row .d-value.old { color: #ff6b6b; text-decoration: line-through; text-decoration-color: rgba(255,107,107,0.5); }
+  .disruption-row .d-value.new { color: var(--green); font-size: 16px; }
+  .disruption-divider { display: flex; flex-direction: column; align-items: center; justify-content: space-around; padding-top: 40px; }
+  .disruption-divider .arrow { font-size: 22px; color: var(--gradient-1); opacity: 0.7; }
+  .impact-label { font-size: 26px; font-weight: 900; text-align: center; width: 100%; max-width: 1000px; margin-top: 28px; padding: 16px; background: rgba(0,210,160,0.08); border: 1px solid rgba(0,210,160,0.2); border-radius: 12px; }
+  .impact-label .compression { color: var(--green); }
 </style>
 </head>
 <body>
@@ -141,44 +160,99 @@
     <p class="meta">광명시장 보고 자료 · 2026년 3월</p>
   </div>
 
-  <!-- 2: Why Now -->
+  <!-- 2: AI Skill Disruption -->
   <div class="slide slide-dark" data-index="1">
-    <h2><span class="accent">왜 지금</span> 서둘러야 하는가?</h2>
-    <p class="lead">지금 행동하지 않으면, 지역사회는 기술 소비자로만 남게 됩니다</p>
-    <div class="stat-row">
-      <div class="stat">
-        <div class="number green">1,500억</div>
-        <div class="label">광명사랑화폐<br>연간 발행</div>
+    <h2>AI 스킬 패키지가 <span class="accent">모든 것</span>을 바꿉니다</h2>
+    <p class="lead">5인 사회적기업이 50인 조직처럼 운영됩니다 — 지금, 이 순간</p>
+    <div class="disruption">
+      <div class="disruption-col before">
+        <div class="disruption-header old">기존 방식</div>
+        <div class="disruption-row">
+          <span class="d-icon">📊</span>
+          <span class="d-label">회계·세무 처리</span>
+          <span class="d-value old">월 120만원 외주</span>
+        </div>
+        <div class="disruption-row">
+          <span class="d-icon">📝</span>
+          <span class="d-label">보조금 신청서</span>
+          <span class="d-value old">2주 작성</span>
+        </div>
+        <div class="disruption-row">
+          <span class="d-icon">📞</span>
+          <span class="d-label">고객 상담</span>
+          <span class="d-value old">주간 9시~6시</span>
+        </div>
+        <div class="disruption-row">
+          <span class="d-icon">📈</span>
+          <span class="d-label">마케팅·홍보</span>
+          <span class="d-value old">전문 인력 채용</span>
+        </div>
+        <div class="disruption-row">
+          <span class="d-icon">🔍</span>
+          <span class="d-label">데이터 분석</span>
+          <span class="d-value old">엑셀 수작업</span>
+        </div>
+        <div class="disruption-row">
+          <span class="d-icon">📋</span>
+          <span class="d-label">성과 보고서</span>
+          <span class="d-value old">3일 소요</span>
+        </div>
+        <div class="disruption-row">
+          <span class="d-icon">🌐</span>
+          <span class="d-label">웹사이트 운영</span>
+          <span class="d-value old">외부 업체 의존</span>
+        </div>
       </div>
-      <div class="stat">
-        <div class="number blue">14개</div>
-        <div class="label">앵커 기관<br>CWB 협약</div>
+      <div class="disruption-divider">
+        <span class="arrow">→</span>
+        <span class="arrow">→</span>
+        <span class="arrow">→</span>
+        <span class="arrow">→</span>
+        <span class="arrow">→</span>
+        <span class="arrow">→</span>
+        <span class="arrow">→</span>
       </div>
-      <div class="stat">
-        <div class="number orange">45개</div>
-        <div class="label">작은도서관<br>마을 거점</div>
-      </div>
-      <div class="stat">
-        <div class="number pink">243개</div>
-        <div class="label">전국 지자체 중<br>선점 기회</div>
+      <div class="disruption-col after">
+        <div class="disruption-header new">AI 스킬 패키지</div>
+        <div class="disruption-row">
+          <span class="d-icon">🤖</span>
+          <span class="d-label">회계 AI 스킬</span>
+          <span class="d-value new">자동 처리, 월 0원</span>
+        </div>
+        <div class="disruption-row">
+          <span class="d-icon">🤖</span>
+          <span class="d-label">신청서 AI 스킬</span>
+          <span class="d-value new">30분 자동 생성</span>
+        </div>
+        <div class="disruption-row">
+          <span class="d-icon">🤖</span>
+          <span class="d-label">상담 AI 스킬</span>
+          <span class="d-value new">24/7 다국어</span>
+        </div>
+        <div class="disruption-row">
+          <span class="d-icon">🤖</span>
+          <span class="d-label">마케팅 AI 스킬</span>
+          <span class="d-value new">콘텐츠 자동 생성</span>
+        </div>
+        <div class="disruption-row">
+          <span class="d-icon">🤖</span>
+          <span class="d-label">분석 AI 스킬</span>
+          <span class="d-value new">실시간 대시보드</span>
+        </div>
+        <div class="disruption-row">
+          <span class="d-icon">🤖</span>
+          <span class="d-label">보고서 AI 스킬</span>
+          <span class="d-value new">10분 자동 생성</span>
+        </div>
+        <div class="disruption-row">
+          <span class="d-icon">🤖</span>
+          <span class="d-label">웹사이트 AI 스킬</span>
+          <span class="d-value new">자체 구축·운영</span>
+        </div>
       </div>
     </div>
-    <div class="content-grid cols-3">
-      <div class="card">
-        <div class="icon">🤖</div>
-        <h3>AI 레버리지</h3>
-        <p>AI가 오픈소스를 읽고 이해 — 누구나 새 서비스를 빠르게 구축</p>
-      </div>
-      <div class="card">
-        <div class="icon">🚀</div>
-        <h3>거인의 어깨</h3>
-        <p>검증된 오픈소스 위에 우리 가치를 더합니다</p>
-      </div>
-      <div class="card">
-        <div class="icon">🏆</div>
-        <h3>선점이 곧 표준</h3>
-        <p>먼저 시작한 도시가 수십 년간 중심에 섭니다</p>
-      </div>
+    <div class="impact-label">
+      사회적기업 운영 비용 <span class="compression">70% 절감</span> · 생산성 <span class="compression">10배</span> · 24시간 운영
     </div>
   </div>
 
