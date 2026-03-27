@@ -36,14 +36,13 @@
 
   .slide {
     position: absolute; inset: 0;
-    display: flex; flex-direction: column; justify-content: flex-start; align-items: center;
-    padding: 56px 72px 40px;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    padding: 40px 72px;
     opacity: 0; transform: translateX(60px);
     transition: opacity 0.5s ease, transform 0.5s ease;
     pointer-events: none; overflow-y: auto;
+    gap: 20px;
   }
-  .slide .lead { margin-bottom: auto; }
-  .slide > :last-child { margin-bottom: auto; }
   .slide.active { opacity: 1; transform: translateX(0); pointer-events: auto; }
 
   .slide-cover {
@@ -67,7 +66,7 @@
 
   .slide h2 { font-size: 42px; font-weight: 700; margin-bottom: 10px; text-align: left; width: 100%; max-width: 100%; }
   .slide h2 .accent { background: linear-gradient(135deg, var(--gradient-1), var(--highlight)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-  .slide .lead { font-size: 22px; color: var(--text-muted); margin-bottom: 24px; text-align: left; width: 100%; max-width: 100%; line-height: 1.5; word-break: keep-all; }
+  .slide .lead { font-size: 22px; color: var(--text-muted); margin-bottom: 0; text-align: left; width: 100%; max-width: 100%; line-height: 1.5; word-break: keep-all; }
 
   .content-grid { display: grid; gap: 16px; width: 100%; max-width: 100%; }
   .content-grid.cols-2 { grid-template-columns: 1fr 1fr; }
@@ -113,19 +112,19 @@
 
   .slide-cta { background: linear-gradient(135deg, #0f3460, #1a1a2e, #2d1b3d); text-align: center; justify-content: center; }
   .slide-cta h2 { text-align: center; font-size: 56px; margin-bottom: 32px; }
-  .slide-cta .diagram-node { font-size: 20px; padding: 18px 32px; min-width: 150px; }
-  .slide-cta .diagram-arrow { font-size: 28px; }
-  .slide-cta .quote { font-size: 30px; max-width: 900px; }
+  .slide-cta .diagram-node { font-size: 24px; padding: 26px 44px; min-width: 180px; }
+  .slide-cta .diagram-arrow { font-size: 40px; }
+  .slide-cta .quote { font-size: 32px; max-width: 100%; }
 
-  .diagram { display: flex; align-items: center; justify-content: center; gap: 16px; width: 100%; max-width: 100%; margin-bottom: 28px; flex-wrap: wrap; }
-  .diagram-node { padding: 18px 32px; border-radius: 14px; font-size: 20px; font-weight: 600; text-align: center; min-width: 150px; }
+  .diagram { display: flex; align-items: center; justify-content: center; gap: 20px; width: 100%; max-width: 100%; flex-wrap: wrap; }
+  .diagram-node { padding: 24px 40px; border-radius: 16px; font-size: 22px; font-weight: 600; text-align: center; min-width: 180px; }
   .diagram-node.ai { background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2)); }
   .diagram-node.se { background: linear-gradient(135deg, var(--green), #00b886); color: #000; }
   .diagram-node.city { background: linear-gradient(135deg, var(--orange), #ff9800); color: #000; }
   .diagram-node.citizen { background: linear-gradient(135deg, var(--highlight), #c62828); }
   .diagram-node.os { background: linear-gradient(135deg, #42a5f5, #1565c0); }
   .diagram-node.cwb { background: linear-gradient(135deg, var(--yellow), #f9a825); color: #000; }
-  .diagram-arrow { font-size: 28px; color: var(--text-muted); }
+  .diagram-arrow { font-size: 36px; color: var(--text-muted); }
 
   .highlight-box { background: linear-gradient(135deg, rgba(102,126,234,0.15), rgba(233,69,96,0.1)); border: 1px solid rgba(102,126,234,0.3); border-radius: 16px; padding: 20px 32px; width: 100%; max-width: 100%; margin-top: 16px; }
   .highlight-box p { font-size: 20px; line-height: 1.7; color: var(--text); word-break: keep-all; }
@@ -590,11 +589,11 @@
     <p class="lead">정부가 블랙록 MOU로 글로벌 자본을 이끌었듯,</p>
     <p class="lead">사회연대기금, 임팩트 투자와 협업해 성장 동력을 만듭니다.</p>
     <div class="diagram">
-      <div class="diagram-node city" style="font-size:13px;padding:12px 18px;">🇰🇷 국가 전략<br>블랙록 MOU</div>
+      <div class="diagram-node city">🇰🇷 국가 전략<br>블랙록 MOU</div>
       <div class="diagram-arrow">→</div>
-      <div class="diagram-node cwb" style="font-size:13px;padding:12px 18px;">🏛️ 광명 전략<br>임팩트 투자 협업</div>
+      <div class="diagram-node cwb">🏛️ 광명 전략<br>임팩트 투자 협업</div>
       <div class="diagram-arrow">→</div>
-      <div class="diagram-node se" style="font-size:13px;padding:12px 18px;">🌱 SSE 생태계<br>동반 성장</div>
+      <div class="diagram-node se">🌱 SSE 생태계<br>동반 성장</div>
     </div>
     <div class="content-grid cols-3">
       <div class="card">
@@ -621,19 +620,19 @@
   <!-- 16: CTA -->
   <div class="slide slide-cta" data-index="15">
     <h2>광명시가 <span class="accent">표준</span>을 만듭니다</h2>
-    <div class="diagram" style="justify-content:center; margin: 36px 0;">
-      <div class="diagram-node os" style="padding:14px 20px;">🔓 오픈소스</div>
+    <div class="diagram">
+      <div class="diagram-node os">🔓 오픈소스</div>
       <div class="diagram-arrow">+</div>
-      <div class="diagram-node ai" style="padding:14px 20px;">🧠 AI 에이전트</div>
+      <div class="diagram-node ai">🧠 AI 에이전트</div>
       <div class="diagram-arrow">+</div>
-      <div class="diagram-node cwb" style="padding:14px 20px;">💰 CWB</div>
+      <div class="diagram-node cwb">💰 CWB</div>
       <div class="diagram-arrow">=</div>
-      <div class="diagram-node citizen" style="padding:18px 28px;font-weight:700;font-size:16px;">🏛️ 광명 모델</div>
+      <div class="diagram-node citizen">🏛️ 광명 모델</div>
     </div>
     <p class="quote">
       243개 지자체 중 <strong style="color:var(--green)">롤모델</strong>이 됩니다<br>
       UN 글로벌 AI 허브의 <strong style="color:var(--blue)">파트너 도시</strong>가 됩니다<br><br>
-      <span style="font-size:16px;opacity:0.6;">사회적경제혁신센터 개소 · 2026년 5월 — 지금이 시작할 때</span>
+      <span style="font-size:22px;opacity:0.5;">사회적경제혁신센터 개소 · 2026년 5월 — 지금이 시작할 때</span>
     </p>
   </div>
 
