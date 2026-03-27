@@ -77,8 +77,8 @@
     border-radius: 16px; padding: 24px;
   }
   .card .icon { font-size: 28px; margin-bottom: 12px; }
-  .card h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; color: #fff; }
-  .card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .card h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; color: #fff; }
+  .card p { font-size: 16px; color: var(--text-muted); line-height: 1.7; word-break: keep-all; }
 
   .stat-row { display: flex; gap: 24px; width: 100%; max-width: 1100px; margin-bottom: 32px; }
   .stat { flex: 1; text-align: center; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(255,255,255,0.06); }
@@ -88,7 +88,7 @@
   .stat .number.orange { color: var(--orange); }
   .stat .number.pink { color: var(--highlight); }
   .stat .number.yellow { color: var(--yellow); }
-  .stat .label { font-size: 13px; color: var(--text-muted); }
+  .stat .label { font-size: 14px; color: var(--text-muted); word-break: keep-all; }
 
   .slide-dark { background: linear-gradient(180deg, #0f0c29 0%, #1a1a2e 100%); }
   .slide-accent { background: linear-gradient(135deg, #16213e, #0f3460); }
@@ -123,7 +123,7 @@
   .diagram-arrow { font-size: 22px; color: var(--text-muted); }
 
   .highlight-box { background: linear-gradient(135deg, rgba(102,126,234,0.15), rgba(233,69,96,0.1)); border: 1px solid rgba(102,126,234,0.3); border-radius: 16px; padding: 20px 32px; width: 100%; max-width: 1100px; margin-top: 16px; }
-  .highlight-box p { font-size: 17px; line-height: 1.7; color: var(--text); }
+  .highlight-box p { font-size: 17px; line-height: 1.7; color: var(--text); word-break: keep-all; }
 
   .quote { font-size: 22px; color: var(--text); text-align: center; max-width: 700px; line-height: 1.7; font-weight: 300; }
   .quote strong { font-weight: 700; }
@@ -138,10 +138,10 @@
   .d-row.after { background: rgba(0,210,160,0.04); border-color: rgba(0,210,160,0.12); }
   .d-row.before { opacity: 0.5; }
   .d-row .d-icon { font-size: 18px; flex-shrink: 0; }
-  .d-row .d-label { color: var(--text-muted); flex: 1; font-size: 14px; }
-  .d-row .d-value { font-weight: 900; white-space: nowrap; font-size: 15px; }
+  .d-row .d-label { color: var(--text-muted); flex: 1; font-size: 15px; word-break: keep-all; }
+  .d-row .d-value { font-weight: 900; white-space: nowrap; font-size: 16px; }
   .d-row .d-value.old { color: #ff6b6b; text-decoration: line-through; text-decoration-color: rgba(255,107,107,0.5); }
-  .d-row .d-value.new { color: var(--green); font-size: 16px; }
+  .d-row .d-value.new { color: var(--green); font-size: 17px; }
   .d-arrow { text-align: center; font-size: 20px; color: var(--gradient-1); opacity: 0.7; }
   .impact-label { font-size: 26px; font-weight: 900; text-align: center; width: 100%; max-width: 1000px; margin-top: 28px; padding: 16px; background: rgba(0,210,160,0.08); border: 1px solid rgba(0,210,160,0.2); border-radius: 12px; }
   .impact-label .compression { color: var(--green); }
@@ -475,8 +475,39 @@
     </div>
   </div>
 
-  <!-- 13: Impact -->
-  <div class="slide slide-warm" data-index="11">
+  <!-- 13: Gwangmyeong Cave Arts Festival -->
+  <div class="slide slide-deep" data-index="11">
+    <h2><span class="accent">광명동굴</span> × 업사이클 아트 페스티벌</h2>
+    <p class="lead">에딘버러 프린지처럼 — 예술가가 직접 기획하고, 광명동굴이 무대가 됩니다</p>
+    <div class="content-grid cols-2">
+      <div class="card">
+        <div class="icon">🎭</div>
+        <h3>프린지 모델: 예술가 주도</h3>
+        <p>심사 없이 누구나 참가 — 공연·전시·창작을 예술가 스스로 기획하고 매년 정기 개최</p>
+      </div>
+      <div class="card">
+        <div class="icon">♻️</div>
+        <h3>업사이클링 → 예술제로 승화</h3>
+        <p>광명의 업사이클링 자산을 소재로 한 창작·전시·공연 — 폐자원이 예술이 되는 도시</p>
+      </div>
+      <div class="card">
+        <div class="icon">⛰️</div>
+        <h3>동굴의 강점 활용</h3>
+        <p>도심 접근성 + 지하 격리성 = 오버투어리즘 우려 없는 유일한 페스티벌 공간</p>
+      </div>
+      <div class="card">
+        <div class="icon">🤖</div>
+        <h3>AI 시대의 새로운 경제활동</h3>
+        <p>취업 너머의 창업·창작 — AI 스킬로 예술가가 직접 기획·마케팅·판매까지</p>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <p>🎨 에딘버러 프린지는 연 <strong style="color:var(--green)">4억 파운드</strong> 경제효과. 광명동굴은 <strong style="color:var(--blue)">지하라는 세계 유일의 무대</strong>를 가지고 있습니다 — AI가 예술가의 창업을 지원하는 새로운 모델</p>
+    </div>
+  </div>
+
+  <!-- 14: Impact -->
+  <div class="slide slide-warm" data-index="13">
     <h2>기대 <span class="accent">효과</span></h2>
     <p class="lead">행정 효율 · 시민 역량 · 지역 경제 · 글로벌 위상</p>
     <div class="stat-row">
@@ -516,8 +547,8 @@
     </div>
   </div>
 
-  <!-- 13: Budget — BlackRock model for social finance -->
-  <div class="slide slide-accent" data-index="12">
+  <!-- 15: Budget — BlackRock model for social finance -->
+  <div class="slide slide-accent" data-index="14">
     <h2>재원: <span class="accent">블랙록 모델</span>을 사회적금융으로</h2>
     <p class="lead">정부가 블랙록 MOU로 글로벌 자본을 이끌었듯, 광명이 임팩트 투자와 협업해 성장 동력을 만듭니다</p>
     <div class="diagram">
@@ -549,8 +580,8 @@
     </div>
   </div>
 
-  <!-- 15: CTA -->
-  <div class="slide slide-cta" data-index="13">
+  <!-- 16: CTA -->
+  <div class="slide slide-cta" data-index="15">
     <h2>광명시가 <span class="accent">표준</span>을 만듭니다</h2>
     <div class="diagram" style="justify-content:center; margin: 36px 0;">
       <div class="diagram-node os" style="padding:14px 20px;">🔓 오픈소스</div>
@@ -575,7 +606,7 @@
   <button type="button" onclick="next()" aria-label="다음">›</button>
 </div>
 <div class="progress" id="progress"></div>
-<div class="slide-counter" id="counter">1 / 14</div>
+<div class="slide-counter" id="counter">1 / 16</div>
 
 <script>
   const slides = document.querySelectorAll('.slide');
