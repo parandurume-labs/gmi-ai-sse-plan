@@ -36,8 +36,8 @@
 
   .slide {
     position: absolute; inset: 0;
-    display: flex; flex-direction: column; justify-content: center; align-items: center;
-    padding: 40px 72px;
+    display: flex; flex-direction: column; justify-content: flex-start; align-items: center;
+    padding: 60px 72px;
     opacity: 0; transform: translateX(60px);
     transition: opacity 0.5s ease, transform 0.5s ease;
     pointer-events: none; overflow-y: auto;
@@ -46,7 +46,7 @@
 
   .slide-cover {
     background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    text-align: center;
+    text-align: center; justify-content: center;
   }
   .slide-cover .badge {
     display: inline-block; padding: 8px 24px;
@@ -109,7 +109,7 @@
   .progress { position: fixed; bottom: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--gradient-1), var(--highlight)); transition: width 0.4s ease; z-index: 100; }
   .slide-counter { position: fixed; bottom: 34px; left: 40px; font-size: 13px; color: var(--text-muted); z-index: 100; }
 
-  .slide-cta { background: linear-gradient(135deg, #0f3460, #1a1a2e, #2d1b3d); text-align: center; }
+  .slide-cta { background: linear-gradient(135deg, #0f3460, #1a1a2e, #2d1b3d); text-align: center; justify-content: center; }
   .slide-cta h2 { text-align: center; font-size: 56px; margin-bottom: 32px; }
   .slide-cta .diagram-node { font-size: 20px; padding: 18px 32px; min-width: 150px; }
   .slide-cta .diagram-arrow { font-size: 28px; }
@@ -585,7 +585,8 @@
   <!-- 15: Budget — BlackRock model for social finance -->
   <div class="slide slide-accent" data-index="14">
     <h2>재원: <span class="accent">블랙록 모델</span>을 사회적금융으로</h2>
-    <p class="lead">정부가 블랙록 MOU로 글로벌 자본을 이끌었듯, 광명이 임팩트 투자와 협업해 성장 동력을 만듭니다</p>
+    <p class="lead">정부가 블랙록 MOU로 글로벌 자본을 이끌었듯,</p>
+    <p class="lead">사회연대기금, 임팩트 투자와 협업해 성장 동력을 만듭니다.</p>
     <div class="diagram">
       <div class="diagram-node city" style="font-size:13px;padding:12px 18px;">🇰🇷 국가 전략<br>블랙록 MOU</div>
       <div class="diagram-arrow">→</div>
